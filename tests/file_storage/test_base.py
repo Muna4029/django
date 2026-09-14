@@ -17,7 +17,6 @@ class CustomStorage(Storage):
 
 
 class StorageValidateFileNameTests(SimpleTestCase):
-
     invalid_file_names = [
         os.path.join("path", "to", os.pardir, "test.file"),
         os.path.join(os.path.sep, "path", "to", "test.file"),
@@ -65,7 +64,6 @@ class StorageValidateFileNameTests(SimpleTestCase):
                 self.subTest(name=name),
                 mock.patch.object(s, "_save", return_value=name),
             ):
-
                 with self.assertRaisesMessage(
                     SuspiciousFileOperation, self.error_msg % name
                 ):

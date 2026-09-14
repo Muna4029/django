@@ -566,10 +566,10 @@ class AdminPasswordChangeForm(SetUnusablePasswordMixin, SetPasswordMixin, forms.
         if self.user.has_usable_password():
             self.fields["password1"].required = False
             self.fields["password2"].required = False
-            self.fields["usable_password"] = (
-                SetUnusablePasswordMixin.create_usable_password_field(
-                    self.usable_password_help_text
-                )
+            self.fields[
+                "usable_password"
+            ] = SetUnusablePasswordMixin.create_usable_password_field(
+                self.usable_password_help_text
             )
 
     def clean(self):
@@ -590,7 +590,6 @@ class AdminPasswordChangeForm(SetUnusablePasswordMixin, SetPasswordMixin, forms.
 
 
 class AdminUserCreationForm(SetUnusablePasswordMixin, UserCreationForm):
-
     usable_password = SetUnusablePasswordMixin.create_usable_password_field()
 
     def __init__(self, *args, **kwargs):

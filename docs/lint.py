@@ -74,7 +74,6 @@ def check_line_too_long_django(file, lines, options=None):
     for lno, line in enumerate(lines):
         # Beware, in `line` we have the trailing newline.
         if len(line) - 1 > options.max_line_length:
-
             # Sphinxlint default exceptions.
             if line.lstrip()[0] in "+|":
                 continue  # ignore wide tables

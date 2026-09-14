@@ -392,7 +392,6 @@ class DeprecatePosargsTests(SimpleTestCase):
                 return a, b, c
 
     def test_decorator_preserves_signature_and_metadata(self):
-
         def original(a, b=1, *, c=2):
             """Docstring."""
             return a, b, c

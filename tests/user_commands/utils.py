@@ -3,7 +3,6 @@ from unittest import mock
 
 
 class AssertFormatterFailureCaughtContext:
-
     def __init__(self, test, shutil_which_result="nonexistent"):
         self.stdout = StringIO()
         self.stderr = StringIO()

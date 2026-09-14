@@ -34,7 +34,6 @@ from ..test_data import TestDataMixin
 
 
 class GEOSTest(SimpleTestCase, TestDataMixin):
-
     error_checking_geom = (
         'Error encountered checking Geometry returned from GEOS C function "{}".'
     )

@@ -64,7 +64,6 @@ class StorageGenerateFilenameTests(SimpleTestCase):
 
 
 class FileSystemStorageGenerateFilenameTests(StorageGenerateFilenameTests):
-
     storage_class = FileSystemStorage
 
 

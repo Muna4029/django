@@ -23,7 +23,6 @@ engine = engines["django"]
 
 
 class PartialTagsTests(TestCase):
-
     def test_invalid_template_name_raises_template_does_not_exist(self):
         for template_name in [123, None, "", "#", "#name"]:
             with (
@@ -150,7 +149,6 @@ class PartialTagsTests(TestCase):
 
 
 class RobustPartialHandlingTests(TestCase):
-
     def override_get_template(self, **kwargs):
         class TemplateWithCustomAttrs:
             def __init__(self, **kwargs):
@@ -217,7 +215,6 @@ class RobustPartialHandlingTests(TestCase):
 
 
 class FindPartialSourceTests(TestCase):
-
     @setup(
         {
             "partial_source_success_template": (

@@ -630,7 +630,6 @@ class BasicExtractorTests(ExtractorTests):
             )
 
     def test_correct_translatable_file_locale_dir(self):
-
         class ReturnTrackingMock(mock.Mock):
             def __init__(self, *args, **kwargs):
                 super().__init__(*args, **kwargs)

@@ -2004,7 +2004,6 @@ class MailTests(MailTestsMixin, SimpleTestCase):
 
 # RemovedInDjango70Warning.
 class MailDeprecatedPositionalArgsTests(SimpleTestCase):
-
     def assertDeprecatedIn70(self, params, name):
         return self.assertWarnsMessage(
             RemovedInDjango70Warning,

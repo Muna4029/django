@@ -2287,7 +2287,6 @@ class M2mThroughFieldsTests(SimpleTestCase):
 
 @isolate_apps("invalid_models_tests")
 class DatabaseLevelOnDeleteTests(TestCase):
-
     def test_db_set_default_support(self):
         class Parent(models.Model):
             pass

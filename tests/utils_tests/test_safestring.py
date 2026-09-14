@@ -134,7 +134,6 @@ class SafeStringTest(SimpleTestCase):
                 self.assertRenderEqual("{{ s }}", expected, s=s + case)
 
     def test_add_obj(self):
-
         base_str = "<strong>strange</strong>"
         add_str = "hello</br>"
 

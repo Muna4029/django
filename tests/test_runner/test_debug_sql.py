@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 
 
 class QueryFormatterTests(unittest.TestCase):
-
     def setUp(self):
         super().setUp()
         self.format_sql_calls = []

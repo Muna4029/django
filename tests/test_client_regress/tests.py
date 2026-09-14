@@ -36,7 +36,6 @@ class TestDataMixin:
 
 
 class ExtraAssertMixin:
-
     def assertRaisesPrefixedMessage(
         self,
         method,
@@ -73,7 +72,6 @@ class ExtraAssertMixin:
 
 @override_settings(ROOT_URLCONF="test_client_regress.urls")
 class AssertContainsTests(ExtraAssertMixin, SimpleTestCase):
-
     def test_basic_contains_not_contains(self):
         response = self.client.get("/no_template_view/")
 

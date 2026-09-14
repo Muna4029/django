@@ -7,7 +7,6 @@ from ..utils import setup
 
 
 class QueryStringTagTests(SimpleTestCase):
-
     request_factory = RequestFactory()
 
     def assertRenderEqual(self, template_name, context, expected):

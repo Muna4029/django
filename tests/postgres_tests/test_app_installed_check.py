@@ -26,7 +26,6 @@ except ImportError:
 
 @isolate_apps("postgres_tests")
 class TestPostgresAppInstalledCheck(PostgreSQLTestCase):
-
     def _make_error(self, obj, klass_name):
         """Helper to create postgres.E005 error for specific objects."""
         return checks.Error(

@@ -772,9 +772,7 @@ class DjangoAdminSettingsDirectory(AdminScriptTestCase):
         with open(os.path.join(app_path, "apps.py"), encoding="utf8") as f:
             content = f.read()
             self.assertIn("class こんにちはConfig(AppConfig)", content)
-            self.assertIn(
-                'name = "こんにちは"' if HAS_BLACK else "name = 'こんにちは'", content
-            )
+            self.assertIn('name = "こんにちは"' if HAS_BLACK else "name = 'こんにちは'", content)
 
     def test_builtin_command(self):
         """

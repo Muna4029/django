@@ -59,7 +59,6 @@ class JSONBAgg(Aggregate):
 
 # RemovedInDjango70Warning: When the deprecation ends, remove completely.
 class StringAgg(_StringAgg):
-
     def __init__(self, expression, delimiter, **extra):
         if isinstance(delimiter, str):
             warnings.warn(

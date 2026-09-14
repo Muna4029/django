@@ -569,7 +569,6 @@ class AsyncMethodDecoratorTests(SimpleTestCase):
                     await asyncio.sleep(0.01)
 
     async def test_argumented(self):
-
         class ClsDecAsync:
             def __init__(self, myattr):
                 self.myattr = myattr

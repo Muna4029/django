@@ -4,7 +4,6 @@ from ..models import Child
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("with_generic_model", "0001_initial"),
     ]

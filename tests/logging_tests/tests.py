@@ -94,7 +94,6 @@ class DefaultLoggingTests(
 
 
 class LoggingAssertionMixin:
-
     def assertLogRecord(
         self,
         logger_cm,
@@ -720,7 +719,6 @@ class LogFormattersTests(SimpleTestCase):
 
 
 class LogResponseRealLoggerTests(LoggingAssertionMixin, TestCase):
-
     request = RequestFactory().get("/test-path/")
 
     def test_missing_response_raises_attribute_error(self):

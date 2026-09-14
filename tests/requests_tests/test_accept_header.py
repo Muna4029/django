@@ -165,9 +165,9 @@ class AcceptHeaderTests(TestCase):
 
     def test_accept_headers(self):
         request = HttpRequest()
-        request.META["HTTP_ACCEPT"] = (
-            "text/*,text/html, application/xhtml+xml,application/xml ;q=0.9,*/*;q=0.8,"
-        )
+        request.META[
+            "HTTP_ACCEPT"
+        ] = "text/*,text/html, application/xhtml+xml,application/xml ;q=0.9,*/*;q=0.8,"
         self.assertEqual(
             [str(accepted_type) for accepted_type in request.accepted_types],
             [
@@ -205,9 +205,9 @@ class AcceptHeaderTests(TestCase):
         Taken from https://datatracker.ietf.org/doc/html/rfc7231#section-5.3.2.
         """
         request = HttpRequest()
-        request.META["HTTP_ACCEPT"] = (
-            "text/*, text/plain, text/plain;format=flowed, */*"
-        )
+        request.META[
+            "HTTP_ACCEPT"
+        ] = "text/*, text/plain, text/plain;format=flowed, */*"
         self.assertEqual(
             [
                 str(accepted_type)
@@ -242,9 +242,9 @@ class AcceptHeaderTests(TestCase):
 
     def test_request_accepts_some(self):
         request = HttpRequest()
-        request.META["HTTP_ACCEPT"] = (
-            "text/html,application/xhtml+xml,application/xml;q=0.9"
-        )
+        request.META[
+            "HTTP_ACCEPT"
+        ] = "text/html,application/xhtml+xml,application/xml;q=0.9"
         self.assertIs(request.accepts("text/html"), True)
         self.assertIs(request.accepts("application/xhtml+xml"), True)
         self.assertIs(request.accepts("application/xml"), True)
@@ -252,9 +252,9 @@ class AcceptHeaderTests(TestCase):
 
     def test_accept_header_priority(self):
         request = HttpRequest()
-        request.META["HTTP_ACCEPT"] = (
-            "text/html,application/xml;q=0.9,*/*;q=0.1,text/*;q=0.5"
-        )
+        request.META[
+            "HTTP_ACCEPT"
+        ] = "text/html,application/xml;q=0.9,*/*;q=0.1,text/*;q=0.5"
 
         tests = [
             (["text/html", "application/xml"], "text/html"),

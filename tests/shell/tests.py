@@ -209,7 +209,6 @@ class ShellCommandTestCase(SimpleTestCase):
 
 
 class ShellCommandAutoImportsTestCase(SimpleTestCase):
-
     @override_settings(
         INSTALLED_APPS=["shell", "django.contrib.auth", "django.contrib.contenttypes"]
     )
